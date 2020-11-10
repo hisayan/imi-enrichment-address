@@ -8,7 +8,7 @@ if (process.argv.length < 3 || !process.argv[2].match(/^[1-9][0-9]*$/)) {
   process.exit(1);
 }
 
-const port = parseInt(process.argv[2]);
+const port = process.env.PORT || parseInt(process.argv[2]);
 
 const server = http.createServer((req, res) => {
   if (req.method === "GET") {
