@@ -12,7 +12,7 @@ mkdir -p ${CACHE_DIR}
 rm -f ${OUTPUT}
 
 for no in `seq -w 1000 1000 47000` ; do
-  url="http://nlftp.mlit.go.jp/isj/dls/data/18.0a/${no}-18.0a.zip"
+  url="https://nlftp.mlit.go.jp/isj/dls/data/13.0b/${no}-13.0b.zip"
   zip=${CACHE_DIR}/${no}.zip
   if [ ! -e "${zip}" ] ; then
     curl $url > ${zip}
